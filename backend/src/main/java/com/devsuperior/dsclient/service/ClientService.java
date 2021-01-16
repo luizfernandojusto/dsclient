@@ -1,22 +1,20 @@
-package com.devsuperior.dsclient.dsclient.service;
+package com.devsuperior.dsclient.service;
 
 import java.util.Optional;
 
 import javax.persistence.EntityNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.devsuperior.dscatalog.service.exceptions.DatabaseException;
-import com.devsuperior.dscatalog.service.exceptions.NotFoundException;
-import com.devsuperior.dsclient.dsclient.dto.ClientDTO;
-import com.devsuperior.dsclient.dsclient.entities.Client;
-import com.devsuperior.dsclient.dsclient.repositories.ClientRepository;
+import com.devsuperior.dsclient.dto.ClientDTO;
+import com.devsuperior.dsclient.entities.Client;
+import com.devsuperior.dsclient.repositories.ClientRepository;
+import com.devsuperior.dsclient.service.exceptions.NotFoundException;
 
 @Service
 public class ClientService {
@@ -63,8 +61,6 @@ public class ClientService {
 			repository.deleteById(id);
 		} catch (EmptyResultDataAccessException e) {
 			throw new NotFoundException("id inexistente :" + id);
-		} catch (DataIntegrityViolationException e) {
-			throw new DatabaseException("Integrity violation");
 		}
 
 	}

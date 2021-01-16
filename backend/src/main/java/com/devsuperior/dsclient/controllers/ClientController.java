@@ -1,4 +1,4 @@
-package com.devsuperior.dsclient.dsclient.controllers;
+package com.devsuperior.dsclient.controllers;
 
 import java.net.URI;
 
@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.devsuperior.dsclient.dsclient.dto.ClientDTO;
-import com.devsuperior.dsclient.dsclient.service.ClientService;
+import com.devsuperior.dsclient.dto.ClientDTO;
+import com.devsuperior.dsclient.service.ClientService;
 
 @RestController
 @RequestMapping(value = "/clients")

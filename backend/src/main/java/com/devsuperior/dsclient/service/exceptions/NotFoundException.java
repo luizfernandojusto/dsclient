@@ -1,4 +1,4 @@
-package com.devsuperior.dsclient.dsclient.service.exceptions;
+package com.devsuperior.dsclient.service.exceptions;
 
 public class NotFoundException extends RuntimeException {
 	private static final long serialVersionUID = 1L;

@@ -1,9 +1,9 @@
-package com.devsuperior.dsclient.dsclient.dto;
+package com.devsuperior.dsclient.dto;
 
 import java.io.Serializable;
 import java.time.Instant;
 
-import com.devsuperior.dsclient.dsclient.entities.Client;
+import com.devsuperior.dsclient.entities.Client;
 
 public class ClientDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
